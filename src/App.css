@@ -1,0 +1,27 @@
+.container {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  transition: width 0.5s;
+}
+
+.table-view {
+  left: 0;
+}
+
+.map-view {
+  right: 0;
+}
+
+.full-screen {
+  width: 100%;
+}
+
+.split-screen {
+  width: 50%;
+}
+
+.hidden {
+  width: 0;
+  overflow: hidden;
+}
