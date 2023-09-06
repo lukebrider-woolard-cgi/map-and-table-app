@@ -3,12 +3,9 @@ export function CatalogTable() {
     <table style={{ width: "100%" }}>
       <thead>
         <tr>
-          <th>Beam ID</th>
-          <th>Coverages</th>
-          <th>Isolations</th>
-          <th>Direction</th>
-          <th>Min Freq</th>
-          <th>Max Freq</th>
+          <th>Polygon ID</th>
+          <th>Area</th>
+          <th>Type</th>
           <th>Actions</th>
         </tr>
       </thead>
