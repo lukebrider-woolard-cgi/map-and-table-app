@@ -1,5 +1,5 @@
 // React
-import { useState } from "react";
+import React, { useState } from "react";
 
 // Style
 import "./IconButtonGroup.css";
@@ -18,17 +18,17 @@ export function IconButtonGroup(props: Props) {
   const defaultId =
     props.defaultSelected !== undefined
       ? props.buttons.findIndex(
-          (button) => button.label === props.defaultSelected
-        )
+        (button) => button.label === props.defaultSelected
+      )
       : -1;
 
   const [clickedId, setClickedId] = useState<number>(defaultId);
 
   const handleButtonClick = (
-    event: React.MouseEvent & { target: HTMLButtonElement },
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     id: number
   ) => {
-    const { target } = event;
+    const target = event.target as HTMLButtonElement;
 
     setClickedId(id);
 
@@ -46,7 +46,7 @@ export function IconButtonGroup(props: Props) {
         key={index}
         name={button.label}
         title={button.label}
-        onClick={(event) => handleButtonClick(event, index)} // investigated type warning, can't reveal target without specifying type in handleButtonClick
+        onClick={(event) => handleButtonClick(event, index)}
         className={`${index === clickedId ? "active" : ""} tool-button`}
       >
         <Icon />
